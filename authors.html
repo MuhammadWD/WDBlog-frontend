@@ -116,15 +116,12 @@
                 </ul>
             </div>
         </header>
-        
-        
-        
-        <section id="popup" class="popup-join" >
-            <div class="popup-body__join">
+        <section id="popup" class="popup" >
+            <div class="popup-body">
         
                 <!--  Попап регистрации  -->
         
-                <div class="popup-content__join first" data-target="reg-form">
+                <div class="popup-content first" data-target="reg-form">
         
                     <div class="join-with__mediabtn">
                         <h3>Зарегестрироваться используя соц. сети</h3>
@@ -156,15 +153,16 @@
                             <label for="psw">Password</label>
                             <input type="password" placeholder="*******" name="psw"required>
                     
-                            <div class="checkbox-container">
-                                <input type="checkbox" class="custom-checkbox" id="agreement" name="agreement" >
-                                <label class="rem" for="agreement">Я принимаю условия
-                                      <a href="">  Пользовательского соглашения</a></label>
+                            <div class="toggle-button toggle-button--tuli">
+                                <input id="toggleButton11" type="checkbox">
+                                <label for="toggleButton11">Я принимаю условаия
+                                    <a class="politica-conf" href="">Политики конфиденциальности</a></label>
+                                <div class="toggle-button__icon"></div>
                             </div>
                     
                             <div class="join-buttons">
                                 <button type="submit" class="join-btn">Регистрация</button>
-                                <button class="other-btn popup-btn" data-path="login-form" >Вход</button>
+                                <a class="other-btn popup-btn" data-path="login-form" >Вход</a>
                             </div>
                     
                         </form>
@@ -173,7 +171,7 @@
         
                 <!--  Попап авторизации  -->
         
-                <div class="popup-content__join second" data-target="login-form">
+                <div class="popup-content second" data-target="login-form">
         
                     <div class="join-with__mediabtn">
                         <h3>Войти используя соц. сети</h3>
@@ -202,24 +200,498 @@
                             <label for="psw">Password</label>
                             <input type="password" placeholder="*******" name="psw"required>
                     
-                            <div class="checkbox-container">
-                                <input type="checkbox" class="custom-checkbox" id="rememberMe" name="remember" >
-                                <label class="rem" for="remember">Запомнить меня</label>
+                            <div class="toggle-button toggle-button--tuli">
+                                <input id="toggleButton12" type="checkbox">
+                                <label for="toggleButton12">Запомнить меня</label>
+                                <div class="toggle-button__icon"></div>
                             </div>
                     
                             <div class="join-buttons">
                                 <button type="submit" class="join-btn">Вход</button>
-                                <button class="other-btn popup-btn" data-path="reg-form">Регистрация</button>
+                                <a class="other-btn popup-btn" data-path="reg-form">Регистрация</a>
                             </div>
                     
                         </form>
                     </div>
                 </div>
         
+                <!--  Edit profile opup  -->
+        
+                <div class="popup-content __edit-user" data-target="popup-edit" >
+                    <div class="popup-header">
+                        <div class="popup-title">Редактирование аккаунта</div>
+                        <a class="close-popup modal-close">
+                            <img src="../assets/images/icons/exit.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="popup-entry">
+        
+                        <!--  User personal information  -->
+        
+                        <div class="personal-info">
+        
+                            <h2>Персональная информация</h2>
+        
+                            <!--  Кнопки сменя фотографий  -->
+        
+                            <div class="personal-buttons">
+                                <button class="load-image buttn">Сменить фото</button>
+                                <button class="change-fon buttn">Сменить фон</button>
+                            </div>
+        
+                            <!--  Форма смены данных  -->
+        
+                            <form action="" class="perfonal-change edit-form">
+        
+                                <div class="username-form editing-forms">
+                                    <label for="username">Юзернейм</label>
+                                    <input type="text" placeholder="Users name here" name="username" required>
+                                </div>
+        
+                                <div class="email-form editing-forms">
+                                    <label for="email">Email</label>
+                                    <input type="text" placeholder="yourmail@example.com" name="email" required>
+                                </div>
+        
+                                <div class="password-form editing-forms">
+                                    <label for="nick">Никнейм</label>
+                                    <input type="text" placeholder="*******" name="nick"required>
+                                </div>
+        
+                            </form>
+        
+                        </div>
+        
+                        <!--  User personal information  -->
+        
+                        <div class="personal-media">
+        
+                            <h2 class="no-btn">Соц. сети</h2>
+        
+                            <form action="" class="media-change edit-form">
+        
+                                <div class="vk-form editing-forms">
+                                    <label for="vk">VK</label>
+                                    <input type="text" placeholder="vk.com/" name="vk" required>
+                                </div>
+        
+                                <div class="google-form editing-forms">
+                                    <label for="ggl">Google</label>
+                                    <input type="text" placeholder="accountt.google.com/" name="ggl"required>
+                                </div>
+        
+                                <div class="twitter-form editing-forms">
+                                    <label for="tw">Twitter</label>
+                                    <input type="text" placeholder="twitter.com/" name="tw"required>
+                                </div>
+        
+                                <div class="facebook-form editing-forms">
+                                    <label for="fb">Facebook</label>
+                                    <input type="text" placeholder="facebook.com/" name="fb"required>
+                                </div>
+        
+                            </form>
+                        </div>
+        
+                        <!--  User personal information  -->
+        
+                        <div class="personal-password">
+        
+                            <h2 class="no-btn">Смена пароля</h2>
+        
+                            <form action="" class="password-change edit-form">
+        
+                                <div class="password-form editing-forms">
+                                    <label for="psw">Текущий пароль</label>
+                                    <input type="password" placeholder="*******" name="psw"required>
+                                </div>
+        
+                                <div class="password-form editing-forms">
+                                    <label for="psw">Новый пароль</label>
+                                    <input type="password" placeholder="*******" name="psw"required>
+                                </div>
+        
+                                <div class="password-form editing-forms">
+                                    <label for="psw">Подтвердить пароль</label>
+                                    <input type="password" placeholder="*******" name="psw"required>
+                                </div>
+        
+                            </form>
+        
+                        </div>
+        
+                        <!--  User personal information  -->
+        
+                        <div class="personal-subscribing">
+        
+                            <h2 class="no-btn">Подписка</h2>
+        
+                            <div class="lern-more-about">
+                                <a href="" class="lern-more__link">Подробнее о подписке и ее преимуществах</a>
+                            </div>
+        
+                            <div class="subscribe-pay">
+                                <button class="pay-button buttn" name="subsc">Оплатить</button>
+                                <label for="subsc">Оплачивая подписку, вы прининимаете условия
+                                    <a href="" class="politica-conf">пользовательского соглашения</a>
+                                </label>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+                    
+                    <!--  Popups footer  -->
+        
+                    <div class="popup-footer">
+                        <button class="save-info buttn">Сохранить</button>
+                    </div>
+        
+                </div>
+        
             </div>
         </section>
 
         
+        <main>
+        
+            <section class="main-wrapper">
+        
+                <div class="category-block">
+        
+                    <!-- Хедер категории -->
+        
+                    <div class="category-block__header">
+            
+                        <div class="category-title"><h1>Популярные авторы</h1></div>
+            
+        
+                        <!-- Поисковик категории -->
+        
+                        <div class="category-searchbox">
+            
+                            <input class="searchbox-input" type="text" placeholder="Поиск по категории..">
+                            <button class="search-button"><img src="assets/images/icons/search.svg" alt=""></button>
+                       
+                        </div>
+                    </div>
+        
+                    <!-- Популярные авторы -->
+        
+                    <div class="popular-authors__block">
+        
+                        <div class="author first">
+        
+                            <!--  Authors image  -->
+        
+                            <a href="" class="author-image__link">
+                                <div class="author-image profile-avatar">
+                                    <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                                </div>
+                            </a>
+        
+                            <!--  Authors description  -->
+        
+                            <div class="author-description">
+        
+                                <div class="author-name">Emillia Johnson</div>
+        
+                                <div class="account-info">
+                                    <div class="author-nickname">@emmijohnson</div>
+                                    <div class="post-views">
+                                        <img src="assets/images/icons/views.svg" alt="">
+                                        <p>250</p>
+                                    </div>
+                                </div>
+        
+                                <div class="author-posts">
+                                    <a href="" class="author-posts__link">50 постов в блоге</a>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                        <div class="author second">
+        
+                            <!--  Authors image  -->
+        
+                            <a href="" class="author-image__link">
+                                <div class="author-image profile-avatar">
+                                    <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                                </div>
+                            </a>
+        
+                            <!--  Authors description  -->
+        
+                            <div class="author-description">
+        
+                                <div class="author-name">Emillia Johnson</div>
+        
+                                <div class="account-info">
+                                    <div class="author-nickname">@emmijohnson</div>
+                                    <div class="post-views">
+                                        <img src="assets/images/icons/views.svg" alt="">
+                                        <p>250</p>
+                                    </div>
+                                </div>
+        
+                                <div class="author-posts">
+                                    <a href="" class="author-posts__link">50 постов в блоге</a>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                        <div class="author third">
+        
+                            <!--  Authors image  -->
+        
+                            <a href="" class="author-image__link">
+                                <div class="author-image profile-avatar">
+                                    <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                                </div>
+                            </a>
+        
+                            <!--  Authors description  -->
+        
+                            <div class="author-description">
+        
+                                <div class="author-name">Emillia Johnson</div>
+        
+                                <div class="account-info">
+                                    <div class="author-nickname">@emmijohnson</div>
+                                    <div class="post-views">
+                                        <img src="assets/images/icons/views.svg" alt="">
+                                        <p>250</p>
+                                    </div>
+                                </div>
+        
+                                <div class="author-posts">
+                                    <a href="" class="author-posts__link">50 постов в блоге</a>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+        
+                </div>
+        
+                <!-- second top авторы -->
+        
+                <div class="popular-authors__block second-top">
+        
+                    <div class="author first">
+        
+                        <!--  Authors image  -->
+        
+                        <a href="" class="author-image__link">
+                            <div class="author-image profile-avatar">
+                                <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                            </div>
+                        </a>
+        
+                        <!--  Authors description  -->
+        
+                        <div class="author-description">
+        
+                            <div class="author-name">Emillia Johnson</div>
+        
+                            <div class="account-info">
+                                <div class="author-nickname">@emmijohnson</div>
+                                <div class="post-views">
+                                    <img src="assets/images/icons/views.svg" alt="">
+                                    <p>250</p>
+                                </div>
+                            </div>
+        
+                            <div class="author-posts">
+                                <a href="" class="author-posts__link">50 постов в блоге</a>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="author second">
+        
+                        <!--  Authors image  -->
+        
+                        <a href="" class="author-image__link">
+                            <div class="author-image profile-avatar">
+                                <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                            </div>
+                        </a>
+        
+                        <!--  Authors description  -->
+        
+                        <div class="author-description">
+        
+                            <div class="author-name">Emillia Johnson</div>
+        
+                            <div class="account-info">
+                                <div class="author-nickname">@emmijohnson</div>
+                                <div class="post-views">
+                                    <img src="assets/images/icons/views.svg" alt="">
+                                    <p>250</p>
+                                </div>
+                            </div>
+        
+                            <div class="author-posts">
+                                <a href="" class="author-posts__link">50 постов в блоге</a>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="author third">
+        
+                        <!--  Authors image  -->
+        
+                        <a href="" class="author-image__link">
+                            <div class="author-image profile-avatar">
+                                <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                            </div>
+                        </a>
+        
+                        <!--  Authors description  -->
+        
+                        <div class="author-description">
+        
+                            <div class="author-name">Emillia Johnson</div>
+        
+                            <div class="account-info">
+                                <div class="author-nickname">@emmijohnson</div>
+                                <div class="post-views">
+                                    <img src="assets/images/icons/views.svg" alt="">
+                                    <p>250</p>
+                                </div>
+                            </div>
+        
+                            <div class="author-posts">
+                                <a href="" class="author-posts__link">50 постов в блоге</a>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+        
+                <!-- all small авторы -->
+        
+                <div class="popular-authors__block all-authors">
+        
+                    <div class="author first">
+        
+                        <!--  Authors image  -->
+        
+                        <a href="" class="author-image__link">
+                            <div class="author-image profile-avatar">
+                                <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                            </div>
+                        </a>
+        
+                        <!--  Authors description  -->
+        
+                        <div class="author-description">
+        
+                            <div class="author-name">Emillia Johnson</div>
+        
+                            <div class="account-info">
+                                <div class="author-nickname">@emmijohnson</div>
+                                <div class="post-views">
+                                    <img src="assets/images/icons/views.svg" alt="">
+                                    <p>250</p>
+                                </div>
+                            </div>
+        
+                            <div class="author-posts">
+                                <a href="" class="author-posts__link">50 постов в блоге</a>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="author second">
+        
+                        <!--  Authors image  -->
+        
+                        <a href="" class="author-image__link">
+                            <div class="author-image profile-avatar">
+                                <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                            </div>
+                        </a>
+        
+                        <!--  Authors description  -->
+        
+                        <div class="author-description">
+        
+                            <div class="author-name">Emillia Johnson</div>
+        
+                            <div class="account-info">
+                                <div class="author-nickname">@emmijohnson</div>
+                                <div class="post-views">
+                                    <img src="assets/images/icons/views.svg" alt="">
+                                    <p>250</p>
+                                </div>
+                            </div>
+        
+                            <div class="author-posts">
+                                <a href="" class="author-posts__link">50 постов в блоге</a>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="author third">
+        
+                        <!--  Authors image  -->
+        
+                        <a href="" class="author-image__link">
+                            <div class="author-image profile-avatar">
+                                <img src="assets/images/temp/pg_WCHWSdT8.png" alt="">
+                            </div>
+                        </a>
+        
+                        <!--  Authors description  -->
+        
+                        <div class="author-description">
+        
+                            <div class="author-name">Emillia Johnson</div>
+        
+                            <div class="account-info">
+                                <div class="author-nickname">@emmijohnson</div>
+                                <div class="post-views">
+                                    <img src="assets/images/icons/views.svg" alt="">
+                                    <p>250</p>
+                                </div>
+                            </div>
+        
+                            <div class="author-posts">
+                                <a href="" class="author-posts__link">50 постов в блоге</a>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+        
+            </div>
+        
+            </section>
+        
+        </main>
 
         <footer class="footer">
             <div class="footer-container">
